@@ -6,8 +6,8 @@
     <footer>
       <UDivider class="my-3"></UDivider>
       <div class="flex justify-between">
-        <span>Created by Szymon Janczak &#169; {{ currentYear }}</span>
-        <span>Theme inspired by
+        <span>Szymon Janczak &#169; {{ currentYear }}</span>
+        <span>Motyw inspirowany
           <NuxtLink to="https://www.2020.works/" external target="_blank" class="underline">2020.works</NuxtLink>
         </span>
       </div>

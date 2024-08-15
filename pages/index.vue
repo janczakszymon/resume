@@ -1,3 +1,3 @@
 <template>
-    <div>janczakszymon.pl</div>
+    <HomeAboutMeComponent />
 </template>
