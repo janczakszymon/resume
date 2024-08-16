@@ -4,6 +4,7 @@
     <div class="links flex flex-col gap-1">
       <slot name="default"/>
     </div>
+    <UDivider v-if="!props.isLast" class="w-1/6 mt-3" />
   </div>
 </template>
 
@@ -12,6 +13,10 @@ const props = defineProps({
   title: {
     type: String,
     required: true
+  },
+  isLast: {
+    type: Boolean,
+    default: false
   }
 });
 </script>

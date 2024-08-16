@@ -1,5 +1,5 @@
 <template>
-  <BoxComponent title="wykształcenie" class="studies-component">
+  <BoxComponent title="wykształcenie" is-last class="studies-component">
     <div v-for="(study, key) in studies" :key="key">{{ study.name }}
       <CircleComponent/>
       {{ study.profile }}
