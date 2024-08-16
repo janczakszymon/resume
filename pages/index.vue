@@ -1,3 +1,4 @@
 <template>
-    <HomeAboutMeComponent />
+  <HomeAboutMeComponent/>
+  <HomeLinksComponent/>
 </template>
