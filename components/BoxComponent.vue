@@ -1,13 +1,19 @@
 <template>
   <div class="box-component my-5">
-    <div class="title">
-      <slot name="title"/>
+    <div class="title">{{ props.title }}</div>
+    <div class="links flex flex-col gap-1">
+      <slot name="default"/>
     </div>
-    <slot name="default"/>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+const props = defineProps({
+  title: {
+    type: String,
+    required: true
+  }
+});
 </script>
 
 <style scoped lang="scss">

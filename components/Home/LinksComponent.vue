@@ -1,26 +1,25 @@
 <template>
-  <BoxComponent class="links-component">
-    <template #title>
-      KONTAKT
-    </template>
-    <div class="links flex flex-col gap-1">
-      <div>Linkedin:
-        <NuxtLink to="https://www.linkedin.com/in/szymon-j-690149213" target="_blank" external>Szymon Janczak</NuxtLink>
-      </div>
-      <div>GitHub:
-        <NuxtLink to="https://github.com/janczakszymon" target="_blank" external>janczakszymon</NuxtLink>
-      </div>
+  <BoxComponent title="kontakt" class="links-component">
+    <div v-for="(link, key) in links" :key="key">
+      {{ link.text}}:
+      <NuxtLink :to="link.to" target="_blank" external class="underline">{{ link.name }}</NuxtLink>
     </div>
   </BoxComponent>
 </template>
 
-<script setup>
-</script>
+<script setup lang="ts">
+import type {ILink} from "~/interface/ILink";
 
-<style scoped lang="scss">
-.links-component {
-  a {
-    text-decoration: underline;
+const links = ref<ILink[]>([
+  {
+    name: 'Szymon Janczak',
+    text: 'Linkedin',
+    to: 'https://www.linkedin.com/in/szymon-j-690149213',
+  },
+  {
+    name: 'janczakszymon',
+    text: 'GitHub',
+    to: 'https://github.com/janczakszymon',
   }
-}
-</style>
+]);
+</script>
