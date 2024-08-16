@@ -6,7 +6,7 @@
         {{ exp.company}} <CircleComponent/> {{exp.location}}
       </div>
       <div>
-        {{exp.startDate}} - {{ exp.isWorking ? 'obecnie' : exp.endDate }}
+        {{exp.startDate}} - {{ exp.endDate ? exp.endDate : 'obecnie' }}
       </div>
     </div>
   </BoxComponent>
@@ -20,7 +20,6 @@ const experience = ref<IExperience[]>([
     company: "Digital Holding Sp. z o.o.",
     startDate: "Lip 2022",
     endDate: "Sie 2023",
-    isWorking: false,
     location: "Olesno, Woj. Opolskie",
     position: "Młodszy programista fullstack",
   },
@@ -28,7 +27,6 @@ const experience = ref<IExperience[]>([
     company: "Dunapack Packaging (Eurobox Polska Sp. z o.o.)",
     startDate: "Mar 2022",
     endDate: "Mar 2023",
-    isWorking: true,
     location: "Lubliniec, Woj. Śląskie",
     position: "Praktykant IT",
   },

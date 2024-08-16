@@ -1,11 +1,12 @@
 <template>
   <HomeAboutMeComponent/>
   <HomeLinksComponent/>
-  <HomeExperienceComponent></HomeExperienceComponent>
-  <HomeProjectsComponent></HomeProjectsComponent>
-  <HomeCertificatesComponent></HomeCertificatesComponent>
-  <HomeLanguagesComponent></HomeLanguagesComponent>
-  <HomeStudiesComponent></HomeStudiesComponent>
+  <HomeExperienceComponent/>
+  <HomeProjectsComponent/>
+  <HomeTechStackComponent/>
+  <HomeCertificatesComponent/>
+  <HomeLanguagesComponent/>
+  <HomeStudiesComponent/>
 </template>
 
 <script setup>

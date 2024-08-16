@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
-  modules: ["@nuxt/ui", "@nuxtjs/google-fonts"],
+  modules: ["@nuxt/ui", "@nuxtjs/google-fonts", "@nuxt/image"],
   googleFonts: {
     download: true,
     families: {
@@ -10,5 +10,14 @@ export default defineNuxtConfig({
         wght: '300..700',
       }
     },
-  }
+  },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@import "@/assets/main.scss";`,
+        },
+      },
+    },
+  },
 })
