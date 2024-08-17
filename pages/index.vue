@@ -1,13 +1,13 @@
 <template>
   <main>
-    <HomeAboutMeComponent/>
-    <HomeLinksComponent/>
-    <HomeExperienceComponent/>
-    <HomeProjectsComponent/>
-    <HomeTechStackComponent/>
-    <HomeCertificatesComponent/>
-    <HomeLanguagesComponent/>
-    <HomeStudiesComponent/>
+    <HomeAboutMeComponent />
+    <HomeLinksComponent />
+    <HomeExperienceComponent />
+    <HomeProjectsComponent />
+    <HomeTechStackComponent />
+    <HomeCertificatesComponent />
+    <HomeLanguagesComponent />
+    <HomeStudiesComponent />
   </main>
 </template>
 

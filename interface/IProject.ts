@@ -1,4 +1,4 @@
 export interface IProject {
-    name: string;
-    isContract: boolean;
+  name: string
+  isContract: boolean
 }

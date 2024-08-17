@@ -1,5 +1,8 @@
 <template>
-  <BoxComponent title="o mnie" class="about-me-component">
+  <BoxComponent
+    title="o mnie"
+    class="about-me-component"
+  >
     <p>
       Junior Fullstack/Backend developer z solidnymi podstawami programowania i ciągłą chęcią nauki. Aktywnie poszerzam
       swoją wiedzę o najnowszych technologiach, aby tworzyć aktualne i nowoczesne aplikacje. Stale przekładam swoją

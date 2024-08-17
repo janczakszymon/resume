@@ -1,10 +1,15 @@
 <template>
   <div class="box-component my-5">
-    <div class="title">{{ props.title }}</div>
-    <div class="links flex flex-col gap-1">
-      <slot name="default"/>
+    <div class="title">
+      {{ props.title }}
     </div>
-    <UDivider v-if="!props.isLast" class="w-1/6 mt-3" />
+    <div class="links flex flex-col gap-1">
+      <slot name="default" />
+    </div>
+    <UDivider
+      v-if="!props.isLast"
+      class="w-1/6 mt-3"
+    />
   </div>
 </template>
 
@@ -12,13 +17,13 @@
 const props = defineProps({
   title: {
     type: String,
-    required: true
+    required: true,
   },
   isLast: {
     type: Boolean,
-    default: false
-  }
-});
+    default: false,
+  },
+})
 </script>
 
 <style scoped lang="scss">

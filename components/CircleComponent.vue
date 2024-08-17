@@ -1,5 +1,5 @@
 <template>
-  <div class="circle-component"/>
+  <div class="circle-component" />
 </template>
 
 <style scoped lang="scss">

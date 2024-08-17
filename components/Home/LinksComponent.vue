@@ -1,14 +1,27 @@
 <template>
-  <BoxComponent title="kontakt" class="links-component">
-    <div v-for="(link, key) in links" :key="key">
-      {{ link.text}}:
-      <NuxtLink :to="link.to" target="_blank" external class="underline">{{ link.name }}</NuxtLink>
+  <BoxComponent
+    title="kontakt"
+    class="links-component"
+  >
+    <div
+      v-for="(link, key) in links"
+      :key="key"
+    >
+      {{ link.text }}:
+      <NuxtLink
+        :to="link.to"
+        target="_blank"
+        external
+        class="underline"
+      >
+        {{ link.name }}
+      </NuxtLink>
     </div>
   </BoxComponent>
 </template>
 
 <script setup lang="ts">
-import type {ILink} from "~/interface/ILink";
+import type { ILink } from '~/interface/ILink'
 
 const links = ref<ILink[]>([
   {
@@ -20,6 +33,6 @@ const links = ref<ILink[]>([
     name: 'janczakszymon',
     text: 'GitHub',
     to: 'https://github.com/janczakszymon',
-  }
-]);
+  },
+])
 </script>

@@ -2,13 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
-  modules: ["@nuxt/ui", "@nuxtjs/google-fonts", "@nuxt/image", "@nuxt/eslint"],
+  modules: ['@nuxt/ui', '@nuxtjs/google-fonts', '@nuxt/image', '@nuxt/eslint'],
   googleFonts: {
     download: true,
     families: {
       'Roboto Mono': {
         wght: '300..700',
-      }
+      },
     },
   },
   vite: {
@@ -18,6 +18,11 @@ export default defineNuxtConfig({
           additionalData: `@import "@/assets/main.scss";`,
         },
       },
+    },
+  },
+  eslint: {
+    config: {
+      stylistic: true,
     },
   },
 })
