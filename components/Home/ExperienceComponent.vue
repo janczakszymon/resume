@@ -45,7 +45,7 @@ const experience = ref<IExperience[]>([
   .experience-details {
     div {
       font-size: .9rem;
-      opacity: .65;
+      color: $gray;
     }
   }
 }

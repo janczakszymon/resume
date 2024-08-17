@@ -4,12 +4,11 @@
 
 <style scoped lang="scss">
 .circle-component {
-  background-color: #222;
+  background-color: $gray;
   width: 5px;
   height: 5px;
   border-radius: 50%;
   display: inline-block;
   vertical-align: middle;
-  opacity: .5;
 }
 </style>

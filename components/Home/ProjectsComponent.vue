@@ -43,7 +43,7 @@ const projects = ref<IProject[]>([
 <style scoped lang="scss">
 .links-component {
   .contract {
-    opacity: .5;
+    color: $gray;
     font-size: .8rem;
     margin-left: 10px;
     text-decoration: none !important;
@@ -51,7 +51,7 @@ const projects = ref<IProject[]>([
 
   .icon {
     margin-left: 10px;
-    opacity: .5;
+    color: $gray;
     vertical-align: middle;
   }
 }

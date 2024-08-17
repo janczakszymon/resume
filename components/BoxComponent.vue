@@ -31,7 +31,8 @@ const props = defineProps({
   .title {
     font-size: 1rem;
     letter-spacing: 4px;
-    opacity: .25;
+    opacity: .35;
+    color: $gray;
     user-select: none;
 
     @screen md {

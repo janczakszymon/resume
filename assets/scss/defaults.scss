@@ -1,7 +1,17 @@
 @import "colors";
 
+html {
+
+  &.light {
+    color: $dark;
+  }
+
+  &.dark {
+    color: $light;
+  }
+}
+
 body {
-  color: $black;
   font-family: "Roboto mono", sans-serif;
   letter-spacing: .35mm;
 

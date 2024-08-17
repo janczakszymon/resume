@@ -1,5 +1,6 @@
 <template>
 	<UContainer>
+		<NavbarComponent />
 		<slot />
 		<footer class="mb-3">
 			<UDivider class="my-3" />
@@ -24,7 +25,7 @@ const currentYear = new Date().getFullYear();
 
 <style scoped lang="scss">
 footer {
-  opacity: .5;
+  color: $gray;
   font-size: .8rem;
 
   @screen md {
