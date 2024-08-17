@@ -1,4 +1,4 @@
 export interface IStudy {
-  name: string
-  profile: string
+	name: string;
+	profile: string;
 }

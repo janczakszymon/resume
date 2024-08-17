@@ -1,43 +1,43 @@
 <template>
-  <BoxComponent
-    title="projekty"
-    class="links-component"
-  >
-    <NuxtLink
-      v-for="(project, key) in projects"
-      :key="key"
-      to="#"
-    >
-      <span class="underline">{{ project.name }}</span>
-      <span
-        v-if="project.isContract"
-        class="contract uppercase"
-      >zlecenie</span>
-      <UIcon
-        name="i-heroicons-arrow-right"
-        class="icon"
-      />
-    </NuxtLink>
-  </BoxComponent>
+	<BoxComponent
+		title="projekty"
+		class="links-component"
+	>
+		<NuxtLink
+			v-for="(project, key) in projects"
+			:key="key"
+			to="#"
+		>
+			<span class="underline">{{ project.name }}</span>
+			<span
+				v-if="project.isContract"
+				class="contract uppercase"
+			>zlecenie</span>
+			<UIcon
+				name="i-heroicons-arrow-right"
+				class="icon"
+			/>
+		</NuxtLink>
+	</BoxComponent>
 </template>
 
 <script setup lang="ts">
-import type { IProject } from '~/interface/IProject'
+import type { IProject } from '~/interface/IProject';
 
 const projects = ref<IProject[]>([
-  {
-    name: 'Resume',
-    isContract: false,
-  },
-  {
-    name: 'Biuro Projektowe',
-    isContract: true,
-  },
-  {
-    name: 'Medycyna Estetyczna',
-    isContract: true,
-  },
-])
+	{
+		name: 'Resume',
+		isContract: false,
+	},
+	{
+		name: 'Biuro Projektowe',
+		isContract: true,
+	},
+	{
+		name: 'Medycyna Estetyczna',
+		isContract: true,
+	},
+]);
 </script>
 
 <style scoped lang="scss">
