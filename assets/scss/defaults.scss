@@ -4,10 +4,12 @@ html {
 
   &.light {
     color: $dark;
+    fill: $dark;
   }
 
   &.dark {
     color: $light;
+    fill: $light;
   }
 }
 
