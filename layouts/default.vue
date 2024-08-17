@@ -25,5 +25,10 @@ const currentYear = new Date().getFullYear();
 <style scoped lang="scss">
 footer {
   opacity: .5;
+  font-size: .8rem;
+
+  @screen md {
+    font-size: 1rem;
+  }
 }
 </style>

@@ -11,11 +11,3 @@
 		</p>
 	</BoxComponent>
 </template>
-
-<style scoped lang="scss">
-.about-me-component {
-  p {
-    text-align: justify;
-  }
-}
-</style>

@@ -3,7 +3,7 @@
 		<div class="title">
 			{{ props.title }}
 		</div>
-		<div class="links flex flex-col gap-1">
+		<div class="content flex flex-col gap-1">
 			<slot name="default" />
 		</div>
 		<UDivider
@@ -29,15 +29,22 @@ const props = defineProps({
 <style scoped lang="scss">
 .box-component {
   .title {
-    font-size: 1.3rem;
+    font-size: 1rem;
     letter-spacing: 4px;
     opacity: .25;
     user-select: none;
+
+    @screen md {
+      font-size: 1.3rem;
+    }
   }
 
-  p {
-    font-size: 1rem;
-    text-align: justify;
+  .content {
+    font-size: .8rem;
+
+    @screen md {
+      font-size: 1rem;
+    }
   }
 }
 </style>
