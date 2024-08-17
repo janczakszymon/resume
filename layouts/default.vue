@@ -1,10 +1,8 @@
 <template>
   <UContainer>
-    <main>
-      <slot/>
-    </main>
+    <slot/>
     <footer class="mb-3">
-      <UDivider class="my-3"></UDivider>
+      <UDivider class="my-3"/>
       <div class="flex justify-between">
         <span>Szymon Janczak &#169; {{ currentYear }}</span>
         <span>motyw
