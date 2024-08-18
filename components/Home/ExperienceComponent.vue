@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import type { IExperience } from '~/interface/IExperience';
+import type { IExperience } from '~/interface/home/IExperience';
 
 const experience = ref<IExperience[]>([
 	{

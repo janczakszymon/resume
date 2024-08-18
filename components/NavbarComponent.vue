@@ -83,42 +83,42 @@ const isDark = computed({
 const navLinks = ref<INavLink[]>([
 	{
 		name: 'aboutMe',
-		to: '#aboutMe',
+		to: '/#aboutMe',
 		external: false
 	},
 	{
 		name: 'contact',
-		to: '#contact',
+		to: '/#contact',
 		external: false
 	},
 	{
 		name: 'experience',
-		to: '#experience',
+		to: '/#experience',
 		external: false
 	},
 	{
 		name: 'projects',
-		to: '#projects',
+		to: '/#projects',
 		external: false
 	},
 	{
 		name: 'techStack',
-		to: '#techStack',
+		to: '/#techStack',
 		external: false
 	},
 	{
 		name: 'certificates',
-		to: '#certificates',
+		to: '/#certificates',
 		external: false
 	},
 	{
 		name: 'languages',
-		to: '#languages',
+		to: '/#languages',
 		external: false
 	},
 	{
 		name: 'studies',
-		to: '#studies',
+		to: '/#studies',
 		external: false
 	},
 ]);

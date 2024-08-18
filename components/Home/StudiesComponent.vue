@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import type { IStudy } from '~/interface/IStudy';
+import type { IStudy } from '~/interface/home/IStudy';
 
 const studies = ref<IStudy[]>([
 	{

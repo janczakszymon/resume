@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import type { ICertificate } from '~/interface/ICertificate';
+import type { ICertificate } from '~/interface/home/ICertificate';
 
 const certificates = ref<ICertificate[]>([
 	{

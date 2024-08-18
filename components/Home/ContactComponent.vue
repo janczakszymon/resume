@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import type { ILink } from '~/interface/ILink';
+import type { ILink } from '~/interface/home/ILink';
 
 const links = ref<ILink[]>([
 	{

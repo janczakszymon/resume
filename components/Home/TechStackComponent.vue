@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import type { ITech } from '~/interface/ITech';
+import type { ITech } from '~/interface/home/ITech';
 
 const techs = ref<ITech[]>([
 	{

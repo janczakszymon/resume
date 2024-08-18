@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import type { ILanguage } from '~/interface/ILanguage';
+import type { ILanguage } from '~/interface/home/ILanguage';
 
 const languages = ref<ILanguage[]>([
 	{
