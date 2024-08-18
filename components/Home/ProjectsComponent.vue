@@ -6,7 +6,7 @@
 		<NuxtLink
 			v-for="(project, key) in projects"
 			:key="key"
-			to="#"
+			:to="`/projects/${project.name}`"
 		>
 			<span class="underline">{{ project.name }}</span>
 			<span
@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import type { IProject } from '~/interface/IProject';
+import type { IProject } from '~/interface/home/IProject';
 
 const projects = ref<IProject[]>([
 	{

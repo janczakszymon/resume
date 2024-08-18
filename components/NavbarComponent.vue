@@ -28,6 +28,7 @@
 							v-model="selectedLanguage"
 							:options="availableLocales"
 							:placeholder="selectedLanguage"
+							icon="i-heroicons-language"
 							tabindex="-1"
 						/>
 						<UButton

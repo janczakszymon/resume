@@ -44,6 +44,7 @@ const techs = ref<ITech[]>([
 <style scoped lang="scss">
 #techStack {
   .tech-icon {
+    filter: grayscale(100%);
     width: 20px;
   }
 }

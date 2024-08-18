@@ -10,7 +10,10 @@ export default defineI18nConfig(() => ({
 			languages: 'Języki',
 			studies: 'Wykształcenie',
 			theme: 'motyw',
-			contract: 'Zlecenie'
+			contract: 'Zlecenie',
+			goBack: 'Powrót',
+			homepage: 'Strona główna',
+			close: 'Kliknij by zamknąć'
 		},
 		en: {
 			aboutMe: 'About me',
@@ -22,7 +25,10 @@ export default defineI18nConfig(() => ({
 			languages: 'Languages',
 			studies: 'Studies',
 			theme: 'theme',
-			contract: 'Contract'
+			contract: 'Contract',
+			goBack: 'Back',
+			homepage: 'Homepage',
+			close: 'Click to close'
 		}
 	}
 }));
