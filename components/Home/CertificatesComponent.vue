@@ -1,7 +1,7 @@
 <template>
 	<BoxComponent
-		title="kwalifikacje i certyfikaty"
-		class="certificates-component"
+		id="certificates"
+		:title="$t('certificates')"
 	>
 		<div
 			v-for="(cert, key) in certificates"

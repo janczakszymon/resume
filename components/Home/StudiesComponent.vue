@@ -1,8 +1,8 @@
 <template>
 	<BoxComponent
-		title="wykształcenie"
+		id="studies"
+		:title="$t('studies')"
 		is-last
-		class="studies-component"
 	>
 		<div
 			v-for="(study, key) in studies"

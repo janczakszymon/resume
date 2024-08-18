@@ -1,7 +1,7 @@
 <template>
 	<BoxComponent
-		title="doświadczenie"
-		class="experience-component"
+		id="experience"
+		:title="$t('experience')"
 	>
 		<div
 			v-for="(exp, key) in experience"
@@ -41,7 +41,7 @@ const experience = ref<IExperience[]>([
 </script>
 
 <style scoped lang="scss">
-.experience-component {
+#experience {
   .experience-details {
     div {
       font-size: .9rem;

@@ -1,7 +1,7 @@
 <template>
 	<BoxComponent
-		title="kontakt"
-		class="links-component"
+		id="contact"
+		:title="$t('contact')"
 	>
 		<div
 			v-for="(link, key) in links"

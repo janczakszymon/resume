@@ -1,7 +1,7 @@
 <template>
 	<main>
 		<HomeAboutMeComponent />
-		<HomeLinksComponent />
+		<HomeContactComponent />
 		<HomeExperienceComponent />
 		<HomeProjectsComponent />
 		<HomeTechStackComponent />

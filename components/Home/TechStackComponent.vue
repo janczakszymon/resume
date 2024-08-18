@@ -1,7 +1,7 @@
 <template>
 	<BoxComponent
-		title="technologie"
-		class="tech-stack-component"
+		id="techStack"
+		:title="$t('techStack')"
 	>
 		<div class="flex gap-3">
 			<div
@@ -42,7 +42,7 @@ const techs = ref<ITech[]>([
 </script>
 
 <style scoped lang="scss">
-.tech-stack-component {
+#techStack {
   .tech-icon {
     width: 20px;
   }

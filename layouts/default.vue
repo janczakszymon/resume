@@ -6,7 +6,8 @@
 			<UDivider class="my-3" />
 			<div class="flex justify-between">
 				<span>Szymon Janczak &#169; {{ currentYear }}</span>
-				<span>motyw
+				<span>
+					{{ $t('theme') }}
 					<NuxtLink
 						to="https://www.2020.works/"
 						external

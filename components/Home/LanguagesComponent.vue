@@ -1,7 +1,7 @@
 <template>
 	<BoxComponent
-		title="języki"
-		class="languages-component"
+		id="languages"
+		:title="$t('languages')"
 	>
 		<div
 			v-for="(lang, key) in languages"

@@ -26,10 +26,8 @@
 					<div class="flex items-center gap-1">
 						<USelectMenu
 							v-model="selectedLanguage"
-							:options="languages"
-							:placeholder="selectedLanguage.name"
-							value-attribute="value"
-							option-attribute="name"
+							:options="availableLocales"
+							:placeholder="selectedLanguage"
 							tabindex="-1"
 						/>
 						<UButton
@@ -56,7 +54,7 @@
 					:target="link.external ? '_blank' : '_self'"
 					tabindex="-1"
 				>
-					{{ link.name }}
+					{{ $t(link.name) }}
 					<UDivider />
 				</NuxtLink>
 			</div>
@@ -66,21 +64,11 @@
 
 <script setup lang="ts">
 import type { INavLink } from '~/interface/INavLink';
-import type { ISelectLanguage } from '~/interface/ISelectLanguage';
 
 const isOpen = ref(false);
 const colorMode = useColorMode();
-const languages = ref<ISelectLanguage[]>([
-	{
-		name: 'Polski',
-		value: 'pl'
-	},
-	{
-		name: 'English',
-		value: 'en'
-	}
-]);
-const selectedLanguage = ref<ISelectLanguage>(languages.value[0]);
+const { locale, setLocale, availableLocales } = useI18n();
+const selectedLanguage = ref(locale.value);
 
 const isDark = computed({
 	get() {
@@ -93,46 +81,50 @@ const isDark = computed({
 
 const navLinks = ref<INavLink[]>([
 	{
-		name: 'O mnie',
-		to: '#',
+		name: 'aboutMe',
+		to: '#aboutMe',
 		external: false
 	},
 	{
-		name: 'Kontakt',
-		to: '#',
+		name: 'contact',
+		to: '#contact',
 		external: false
 	},
 	{
-		name: 'Doświadczenie',
-		to: '#',
+		name: 'experience',
+		to: '#experience',
 		external: false
 	},
 	{
-		name: 'Projekty',
-		to: '#',
+		name: 'projects',
+		to: '#projects',
 		external: false
 	},
 	{
-		name: 'Technolgie',
-		to: '#',
+		name: 'techStack',
+		to: '#techStack',
 		external: false
 	},
 	{
-		name: 'Certyfikaty',
-		to: '#',
+		name: 'certificates',
+		to: '#certificates',
 		external: false
 	},
 	{
-		name: 'Języki',
-		to: '#',
+		name: 'languages',
+		to: '#languages',
 		external: false
 	},
 	{
-		name: 'Wykształcenie',
-		to: '#',
+		name: 'studies',
+		to: '#studies',
 		external: false
 	},
 ]);
+
+watch(selectedLanguage, () => {
+	setLocale(selectedLanguage.value);
+});
 </script>
 
 <style scoped lang="scss">

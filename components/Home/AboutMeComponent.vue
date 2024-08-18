@@ -1,7 +1,7 @@
 <template>
 	<BoxComponent
-		title="o mnie"
-		class="about-me-component"
+		id="aboutMe"
+		:title="$t('aboutMe')"
 	>
 		<p>
 			Junior Fullstack/Backend developer z solidnymi podstawami programowania i ciągłą chęcią nauki. Aktywnie poszerzam

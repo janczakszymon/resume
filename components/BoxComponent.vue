@@ -1,5 +1,5 @@
 <template>
-	<div class="box-component my-5">
+	<div class="box-component mb-5">
 		<div class="title">
 			{{ props.title }}
 		</div>
@@ -28,12 +28,15 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .box-component {
+  scroll-margin-top: 100px;
+
   .title {
     font-size: 1rem;
     letter-spacing: 4px;
     opacity: .35;
     color: $gray;
     user-select: none;
+    text-transform: lowercase;
 
     @screen md {
       font-size: 1.3rem;

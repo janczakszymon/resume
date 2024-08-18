@@ -2,7 +2,14 @@
 export default defineNuxtConfig({
 	compatibilityDate: '2024-04-03',
 	devtools: { enabled: false },
-	modules: ['@nuxt/ui', '@nuxtjs/google-fonts', '@nuxt/image', '@nuxt/eslint', '@nuxtjs/sitemap'],
+	modules: [
+		'@nuxt/ui',
+		'@nuxtjs/google-fonts',
+		'@nuxt/image',
+		'@nuxt/eslint',
+		'@nuxtjs/sitemap',
+		'@nuxtjs/i18n'
+	],
 	googleFonts: {
 		download: true,
 		families: {
@@ -31,5 +38,9 @@ export default defineNuxtConfig({
 	},
 	colorMode: {
 		preference: 'light'
+	},
+	i18n: {
+		locales: ['pl', 'en'],
+		defaultLocale: 'pl',
 	}
 });

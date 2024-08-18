@@ -1,7 +1,7 @@
 <template>
 	<BoxComponent
-		title="projekty"
-		class="links-component"
+		id="projects"
+		:title="$t('projects')"
 	>
 		<NuxtLink
 			v-for="(project, key) in projects"
@@ -12,7 +12,7 @@
 			<span
 				v-if="project.isContract"
 				class="contract uppercase"
-			>zlecenie</span>
+			>{{ $t('contract') }}</span>
 			<UIcon
 				name="i-heroicons-arrow-right"
 				class="icon"
@@ -41,7 +41,7 @@ const projects = ref<IProject[]>([
 </script>
 
 <style scoped lang="scss">
-.links-component {
+#projects {
   .contract {
     color: $gray;
     font-size: .8rem;
