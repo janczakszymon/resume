@@ -28,8 +28,6 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .box-component {
-  scroll-margin-top: 100px;
-
   .title {
     font-size: 1rem;
     letter-spacing: 4px;

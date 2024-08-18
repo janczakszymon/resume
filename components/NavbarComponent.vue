@@ -21,7 +21,7 @@
 		<USlideover
 			v-model="isOpen"
 		>
-			<div class="flex flex-col gap-3 p-3">
+			<div class="flex flex-col gap-3 p-3 overflow-y-auto">
 				<div class="flex justify-between items-center">
 					<div class="flex items-center gap-1">
 						<USelectMenu
@@ -53,6 +53,7 @@
 					:external="link.external"
 					:target="link.external ? '_blank' : '_self'"
 					tabindex="-1"
+					@click="isOpen = false"
 				>
 					{{ $t(link.name) }}
 					<UDivider />
@@ -129,12 +130,8 @@ watch(selectedLanguage, () => {
 
 <style scoped lang="scss">
 .navbar-component {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-
   .logo {
-    width: 250px;
+    width: 230px;
   }
 }
 </style>
