@@ -4,7 +4,7 @@
 		:title="$t('projects')"
 		icon="i-heroicons-folder-open"
 	>
-		<NuxtLink
+		<NuxtLinkLocale
 			v-for="(project, key) in projects"
 			:key="key"
 			:to="`/projects/${project.name}`"
@@ -15,7 +15,7 @@
 				name="i-heroicons-arrow-right"
 				class="icon"
 			/>
-		</NuxtLink>
+		</NuxtLinkLocale>
 	</BoxComponent>
 </template>
 

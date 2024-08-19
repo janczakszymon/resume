@@ -17,6 +17,7 @@
 <script setup lang="ts">
 const i18n = useI18n();
 const route = useRoute();
+const localePath = useLocalePath();
 
 const props = defineProps({
 	fullName: {
@@ -29,7 +30,7 @@ const breadcrumbLinks = ref([
 	{
 		label: i18n.t('homepage'),
 		icon: 'i-heroicons-home',
-		to: '/'
+		to: localePath('/')
 	},
 	{
 		icon: 'i-heroicons-code-bracket',
