@@ -15,6 +15,7 @@ export default defineI18nConfig(() => ({
 			homepage: 'Strona główna',
 			close: 'Kliknij by zamknąć',
 			images: 'Zdjęcia',
+			opensource: 'Opensource',
 		},
 		en: {
 			aboutMe: 'About me',
@@ -31,6 +32,7 @@ export default defineI18nConfig(() => ({
 			homepage: 'Homepage',
 			close: 'Click to close',
 			images: 'Images',
+			opensource: 'Opensource'
 		}
 	}
 }));
