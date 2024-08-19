@@ -1,9 +1,9 @@
 <template>
 	<div class="box-component mb-5">
-		<div class="title">
-			{{ props.title }}
+		<div class="title flex gap-3 items-center">
+			<UIcon :name="props.icon" /> {{ props.title }}
 		</div>
-		<div class="content flex flex-col gap-1">
+		<div class="content flex flex-col gap-1.5">
 			<slot name="default" />
 		</div>
 		<UDivider
@@ -18,6 +18,10 @@ const props = defineProps({
 	title: {
 		type: String,
 		required: true,
+	},
+	icon: {
+		type: String,
+		default: 'i-heroicons-newspaper'
 	},
 	isLast: {
 		type: Boolean,

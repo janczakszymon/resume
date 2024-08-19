@@ -2,6 +2,7 @@
 	<BoxComponent
 		id="studies"
 		:title="$t('studies')"
+		icon="i-heroicons-academic-cap"
 		is-last
 	>
 		<div

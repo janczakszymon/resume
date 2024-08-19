@@ -2,6 +2,7 @@
 	<BoxComponent
 		id="languages"
 		:title="$t('languages')"
+		icon="i-heroicons-language"
 	>
 		<div
 			v-for="(lang, key) in languages"

@@ -2,6 +2,7 @@
 	<BoxComponent
 		id="projects"
 		:title="$t('projects')"
+		icon="i-heroicons-folder-open"
 	>
 		<NuxtLink
 			v-for="(project, key) in projects"

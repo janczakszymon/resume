@@ -2,6 +2,7 @@
 	<BoxComponent
 		id="certificates"
 		:title="$t('certificates')"
+		icon="i-heroicons-clipboard-document-check"
 	>
 		<div
 			v-for="(cert, key) in certificates"

@@ -2,6 +2,7 @@
 	<BoxComponent
 		id="contact"
 		:title="$t('contact')"
+		icon="i-heroicons-user-plus"
 	>
 		<div
 			v-for="(link, key) in links"

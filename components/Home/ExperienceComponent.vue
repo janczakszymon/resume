@@ -2,6 +2,7 @@
 	<BoxComponent
 		id="experience"
 		:title="$t('experience')"
+		icon="i-heroicons-briefcase"
 	>
 		<div
 			v-for="(exp, key) in experience"
@@ -10,7 +11,10 @@
 		>
 			<span class="position">{{ exp.position }}</span>
 			<div>
-				{{ exp.company }} <CircleComponent /> {{ exp.location }}
+				{{ exp.company }}
+			</div>
+			<div>
+				{{ exp.location }}
 			</div>
 			<div>
 				{{ exp.startDate }} - {{ exp.endDate ? exp.endDate : 'obecnie' }}

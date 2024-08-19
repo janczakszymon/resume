@@ -2,6 +2,7 @@
 	<BoxComponent
 		id="techStack"
 		:title="$t('techStack')"
+		icon="i-heroicons-code-bracket"
 	>
 		<div class="flex gap-3">
 			<div
