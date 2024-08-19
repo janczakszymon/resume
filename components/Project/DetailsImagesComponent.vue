@@ -28,7 +28,7 @@
 						alt="image"
 					/>
 					<div
-						class="text-center py-1 uppercase text-xs sm:text-sm"
+						class="text-center py-1 uppercase text-xs"
 						@click="isOpen = false"
 					>
 						{{ $t('close') }}
