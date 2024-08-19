@@ -42,5 +42,8 @@ export default defineNuxtConfig({
 	i18n: {
 		locales: ['pl', 'en'],
 		defaultLocale: 'pl',
-	}
+	},
+	app: {
+		pageTransition: { name: 'page', mode: 'out-in' }
+	},
 });
