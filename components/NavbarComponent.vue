@@ -73,6 +73,7 @@
 						<NuxtImg
 							src="/images/mikrus_logo.webp"
 							alt="mikrus_logo"
+							class="w-full"
 						/>
 					</NuxtLink>
 				</div>
