@@ -19,7 +19,7 @@
 					class="m-auto"
 					:ui="{
 						base: 'm-auto',
-						background: 'bg-inherit',
+						background: 'bg-inherit dark:bg-inherit',
 						shadow: 'shadow-none'
 					}"
 				>
