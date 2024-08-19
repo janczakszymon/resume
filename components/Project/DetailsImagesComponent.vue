@@ -1,6 +1,7 @@
 <template>
 	<BoxComponent
 		:title="$t('images')"
+		icon="i-heroicons-camera"
 		no-divider
 	>
 		<template #default>
