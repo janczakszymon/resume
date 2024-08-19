@@ -1,5 +1,5 @@
 <template>
-	<div class="details-header-component my-3">
+	<div class="details-header-component mt-6">
 		<UBreadcrumb
 			:links="breadcrumbLinks"
 			:ui="{
