@@ -1,5 +1,5 @@
 <template>
-	<nav class="navbar-component flex items-center justify-between py-1 bg-zinc-100 dark:bg-slate-900">
+	<nav class="navbar-component flex items-center justify-between gap-3 py-1 bg-zinc-100 dark:bg-slate-900">
 		<svg
 			width="681"
 			height="71"

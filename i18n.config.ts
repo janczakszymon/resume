@@ -13,7 +13,8 @@ export default defineI18nConfig(() => ({
 			contract: 'Zlecenie',
 			goBack: 'Powrót',
 			homepage: 'Strona główna',
-			close: 'Kliknij by zamknąć'
+			close: 'Kliknij by zamknąć',
+			images: 'Zdjęcia',
 		},
 		en: {
 			aboutMe: 'About me',
@@ -28,7 +29,8 @@ export default defineI18nConfig(() => ({
 			contract: 'Contract',
 			goBack: 'Back',
 			homepage: 'Homepage',
-			close: 'Click to close'
+			close: 'Click to close',
+			images: 'Images',
 		}
 	}
 }));

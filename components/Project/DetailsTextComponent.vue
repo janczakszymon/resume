@@ -1,5 +1,5 @@
 <template>
-	<p class="details-text-component">
+	<p class="details-text-component my-5">
 		Strona-wizytówka firmy SketchIT, zajmującej się projektowaniem budynków. Projekt od strony technicznej prowadzony
 		przeze mnie od podstaw, od napisania części frontendowej przez stworzenie dedykowanego panelu kończąc na
 		umieszczeniu strony w sieci. Całość frontendu została napisana przy użyciu frameworka Nuxt, natomiast backend w

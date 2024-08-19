@@ -48,8 +48,12 @@ const experience = ref<IExperience[]>([
 #experience {
   .experience-details {
     div {
-      font-size: .9rem;
+      font-size: .8rem;
       color: $gray;
+
+      @screen md {
+        font-size: .9rem;
+      }
     }
   }
 }

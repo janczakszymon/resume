@@ -1,29 +1,40 @@
 <template>
-	<div class="details-images-component grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 items-center">
-		<NuxtImg
-			v-for="(image, key) in props.images"
-			:key="key"
-			:src="image"
-			alt="image"
-			class="preview-image col-span-1 rounded-xl"
-			@click="currentVisibleImage=key; isOpen = true"
-		/>
-		<UModal
-			v-if="props.images"
-			v-model="isOpen"
-		>
-			<NuxtImg
-				:src="props.images[currentVisibleImage]"
-				alt="image"
-			/>
-			<div
-				class="text-center py-1 uppercase text-xs sm:text-sm hover:opacity-75 cursor-pointer transition duration-100"
-				@click="isOpen = false"
-			>
-				{{ $t('close') }}
+	<BoxComponent
+		:title="$t('images')"
+		no-divider
+	>
+		<template #default>
+			<div class="details-images-component grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 items-center">
+				<NuxtImg
+					v-for="(image, key) in props.images"
+					:key="key"
+					:src="image"
+					alt="image"
+					class="preview-image"
+					@click="currentVisibleImage=key; isOpen = true"
+				/>
+				<UModal
+					v-if="props.images"
+					v-model="isOpen"
+					class="m-auto"
+					:ui="{
+						base: 'm-auto bg-inherit shadow-none'
+					}"
+				>
+					<NuxtImg
+						:src="props.images[currentVisibleImage]"
+						alt="image"
+					/>
+					<div
+						class="text-center py-1 uppercase text-xs sm:text-sm"
+						@click="isOpen = false"
+					>
+						{{ $t('close') }}
+					</div>
+				</UModal>
 			</div>
-		</UModal>
-	</div>
+		</template>
+	</BoxComponent>
 </template>
 
 <script setup lang="ts">
@@ -42,9 +53,11 @@ const currentVisibleImage = ref(0);
 .details-images-component {
   .preview-image {
     width: 100%;
+    height: 100%;
     cursor: pointer;
     transition: 150ms;
     -webkit-user-drag: none;
+    object-fit: cover;
 
     &:hover {
       opacity: .85;

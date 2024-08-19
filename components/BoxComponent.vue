@@ -7,7 +7,7 @@
 			<slot name="default" />
 		</div>
 		<UDivider
-			v-if="!props.isLast"
+			v-if="!props.noDivider"
 			class="w-1/6 mt-3"
 		/>
 	</div>
@@ -23,7 +23,7 @@ const props = defineProps({
 		type: String,
 		default: 'i-heroicons-newspaper'
 	},
-	isLast: {
+	noDivider: {
 		type: Boolean,
 		default: false,
 	},
@@ -33,7 +33,7 @@ const props = defineProps({
 <style scoped lang="scss">
 .box-component {
   .title {
-    font-size: 1rem;
+    font-size: .9rem;
     letter-spacing: 4px;
     opacity: .35;
     color: $gray;

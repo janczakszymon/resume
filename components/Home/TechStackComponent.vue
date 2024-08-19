@@ -4,11 +4,11 @@
 		:title="$t('techStack')"
 		icon="i-heroicons-code-bracket"
 	>
-		<div class="flex gap-3">
+		<div class="flex flex-wrap gap-5">
 			<div
 				v-for="(tech, key) in techs"
 				:key="key"
-				class="flex items-center gap-2"
+				class="flex items-center gap-1"
 			>
 				<NuxtImg
 					v-if="tech.icon"
@@ -17,7 +17,6 @@
 					class="tech-icon"
 				/>
 				{{ tech.name }}
-				<CircleComponent v-if="key < techs.length-1" />
 			</div>
 		</div>
 	</BoxComponent>

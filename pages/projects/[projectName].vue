@@ -1,12 +1,9 @@
 <template>
-	<main class="flex flex-col gap-6 mb-5">
-		<UBreadcrumb
-			:links="breadcrumbLinks"
-			divider="/"
-		/>
+	<main class="flex flex-col mb-5">
 		<ProjectDetailsHeaderComponent :full-name="project.fullName" />
 		<ProjectDetailsLinksComponent :links="project.links" />
 		<ProjectDetailsTextComponent :text="project.description" />
+		<HomeTechStackComponent no-divider />
 		<ProjectDetailsImagesComponent :images="project.images" />
 	</main>
 </template>
@@ -15,19 +12,6 @@
 import type { IProjectDetails } from '~/interface/project/IProjectDetails';
 
 const route = useRoute();
-const i18n = useI18n();
-
-const breadcrumbLinks = ref([
-	{
-		label: i18n.t('homepage'),
-		icon: 'i-heroicons-home',
-		to: '/'
-	},
-	{
-		icon: 'i-heroicons-code-bracket',
-		label: route.params.projectName,
-	},
-]);
 
 const project = ref<IProjectDetails>({
 	name: 'Biuro Projektowe',

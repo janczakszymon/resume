@@ -1,5 +1,5 @@
 <template>
-	<div class="details-links-component flex gap-3 flex-wrap">
+	<div class="details-links-component flex gap-3 flex-wrap mt-5">
 		<NuxtLink
 			v-for="(link, key) in props.links"
 			:key="key"

@@ -10,10 +10,7 @@
 			:to="`/projects/${project.name}`"
 		>
 			<span class="underline">{{ project.name }}</span>
-			<span
-				v-if="project.isContract"
-				class="contract uppercase"
-			>{{ $t('contract') }}</span>
+			<span class="type uppercase">{{ $t(project.type) }}</span>
 			<UIcon
 				name="i-heroicons-arrow-right"
 				class="icon"
@@ -28,26 +25,30 @@ import type { IProject } from '~/interface/home/IProject';
 const projects = ref<IProject[]>([
 	{
 		name: 'Resume',
-		isContract: false,
+		type: 'opensource',
 	},
 	{
 		name: 'Biuro Projektowe',
-		isContract: true,
+		type: 'contract',
 	},
 	{
 		name: 'Medycyna Estetyczna',
-		isContract: true,
+		type: 'contract',
 	},
 ]);
 </script>
 
 <style scoped lang="scss">
 #projects {
-  .contract {
+  .type {
     color: $gray;
-    font-size: .8rem;
+    font-size: .7rem;
     margin-left: 10px;
     text-decoration: none !important;
+
+    @screen md {
+      font-size: .8rem;
+    }
   }
 
   .icon {
