@@ -18,7 +18,9 @@
 					v-model="isOpen"
 					class="m-auto"
 					:ui="{
-						base: 'm-auto bg-inherit shadow-none'
+						base: 'm-auto',
+						background: 'bg-inherit',
+						shadow: 'shadow-none'
 					}"
 				>
 					<NuxtImg
