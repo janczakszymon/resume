@@ -30,7 +30,7 @@ body {
 // Nuxt page transition
 .page-enter-active,
 .page-leave-active {
-  transition: all 0.1s;
+  transition: all .15s;
 }
 .page-enter-from,
 .page-leave-to {

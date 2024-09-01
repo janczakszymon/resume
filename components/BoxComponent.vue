@@ -35,7 +35,7 @@ const props = defineProps({
   .title {
     font-size: .9rem;
     letter-spacing: 4px;
-    opacity: .35;
+    opacity: .5;
     color: $gray;
     user-select: none;
     text-transform: lowercase;
