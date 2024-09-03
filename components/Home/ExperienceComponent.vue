@@ -4,44 +4,35 @@
 		:title="$t('experience')"
 		icon="i-heroicons-briefcase"
 	>
-		<div
-			v-for="(exp, key) in experience"
-			:key="key"
-			class="experience-details"
-		>
-			<span class="position">{{ exp.position }}</span>
-			<div>
-				{{ exp.company }}
+		<template v-if="dataStore.data">
+			<div
+				v-for="(exp, key) in experiences"
+				:key="key"
+				class="experience-details"
+			>
+				<span class="position">{{ exp.position[$i18n.locale] }}</span>
+				<div>
+					{{ exp.company }}
+				</div>
+				<div>
+					{{ exp.location }}
+				</div>
+				<div>
+					{{ format(exp.startDate, 'MM-yyyy') }} - {{ exp.endDate ? format(exp.endDate, 'MM-yyyy') : 'obecnie' }}
+				</div>
 			</div>
-			<div>
-				{{ exp.location }}
-			</div>
-			<div>
-				{{ exp.startDate }} - {{ exp.endDate ? exp.endDate : 'obecnie' }}
-			</div>
-		</div>
+		</template>
+		<SkeletonComponent v-else />
 	</BoxComponent>
 </template>
 
 <script setup lang="ts">
+import { format } from 'date-fns';
 import type { IExperience } from '~/interface/home/IExperience';
+import { useDataStore } from '~/store/dataStore';
 
-const experience = ref<IExperience[]>([
-	{
-		company: 'Digital Holding Sp. z o.o.',
-		startDate: 'Lip 2022',
-		endDate: 'Sie 2023',
-		location: 'Olesno, Woj. Opolskie',
-		position: 'Młodszy programista fullstack',
-	},
-	{
-		company: 'Dunapack Packaging (Eurobox Polska Sp. z o.o.)',
-		startDate: 'Mar 2022',
-		endDate: 'Mar 2023',
-		location: 'Lubliniec, Woj. Śląskie',
-		position: 'Praktykant IT',
-	},
-]);
+const dataStore = useDataStore();
+const experiences = computed<IExperience[]>(() => dataStore.data['experiences']);
 </script>
 
 <style scoped lang="scss">

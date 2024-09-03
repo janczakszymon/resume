@@ -4,38 +4,30 @@
 		:title="$t('projects')"
 		icon="i-heroicons-folder-open"
 	>
-		<NuxtLinkLocale
-			v-for="(project, key) in projects"
-			:key="key"
-			:to="`/projects/${project.name}`"
-		>
-			<span class="underline">{{ project.name }}</span>
-			<span class="type uppercase">{{ $t(project.type) }}</span>
-			<UIcon
-				name="i-heroicons-arrow-right"
-				class="icon"
-			/>
-		</NuxtLinkLocale>
+		<template v-if="dataStore.data">
+			<NuxtLinkLocale
+				v-for="(project, key) in projects"
+				:key="key"
+				:to="`/projects/${project.id}`"
+			>
+				<span class="underline">{{ project.name[$i18n.locale] }}</span>
+				<span class="type uppercase">{{ $t(project.type) }}</span>
+				<UIcon
+					name="i-heroicons-arrow-right"
+					class="icon"
+				/>
+			</NuxtLinkLocale>
+		</template>
+		<SkeletonComponent v-else />
 	</BoxComponent>
 </template>
 
 <script setup lang="ts">
+import { useDataStore } from '~/store/dataStore';
 import type { IProject } from '~/interface/home/IProject';
 
-const projects = ref<IProject[]>([
-	{
-		name: 'Resume',
-		type: 'opensource',
-	},
-	{
-		name: 'Biuro Projektowe',
-		type: 'contract',
-	},
-	{
-		name: 'Medycyna Estetyczna',
-		type: 'contract',
-	},
-]);
+const dataStore = useDataStore();
+const projects = computed<IProject[]>(() => dataStore.data['projects']);
 </script>
 
 <style scoped lang="scss">

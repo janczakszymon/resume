@@ -4,26 +4,33 @@
 		:title="$t('contact')"
 		icon="i-heroicons-user-plus"
 	>
-		<div
-			v-for="(link, key) in links"
-			:key="key"
-		>
-			{{ link.text }}:
-			<NuxtLink
-				:to="link.to"
-				target="_blank"
-				external
-				class="underline"
+		<template v-if="isVisible">
+			<div
+				v-for="(link, key) in links"
+				:key="key"
 			>
-				{{ link.name }}
-			</NuxtLink>
-		</div>
+				{{ link.text }}:
+				<NuxtLink
+					:to="link.to"
+					target="_blank"
+					external
+					class="underline"
+				>
+					{{ link.name }}
+				</NuxtLink>
+			</div>
+		</template>
+		<ClickToShowComponent
+			v-else
+			v-model="isVisible"
+		/>
 	</BoxComponent>
 </template>
 
 <script setup lang="ts">
 import type { ILink } from '~/interface/home/ILink';
 
+const isVisible = ref(false);
 const links = ref<ILink[]>([
 	{
 		name: 'Szymon Janczak',
@@ -34,6 +41,11 @@ const links = ref<ILink[]>([
 		name: 'janczakszymon',
 		text: 'GitHub',
 		to: 'https://github.com/janczakszymon',
+	},
+	{
+		name: 'kontakt@janczakszymon.pl',
+		text: 'Email',
+		to: 'mailto:kontakt@janczakszymon.pl',
 	},
 ]);
 </script>

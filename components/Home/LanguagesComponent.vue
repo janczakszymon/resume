@@ -4,28 +4,24 @@
 		:title="$t('languages')"
 		icon="i-heroicons-language"
 	>
-		<div
-			v-for="(lang, key) in languages"
-			:key="key"
-		>
-			{{ lang.name }}
-			<CircleComponent />
-			{{ lang.level }}
-		</div>
+		<template v-if="dataStore.data">
+			<div
+				v-for="(lang, key) in languages"
+				:key="key"
+			>
+				{{ lang.textPrimary[$i18n.locale] }}
+				<CircleComponent />
+				{{ lang.textSecondary[$i18n.locale] }}
+			</div>
+		</template>
+		<SkeletonComponent v-else />
 	</BoxComponent>
 </template>
 
 <script setup lang="ts">
-import type { ILanguage } from '~/interface/home/ILanguage';
+import { useDataStore } from '~/store/dataStore';
+import type { IText } from '~/interface/home/IText';
 
-const languages = ref<ILanguage[]>([
-	{
-		name: 'Angielski',
-		level: 'Średniozaawansowany',
-	},
-	{
-		name: 'Polski',
-		level: 'Ojczysty',
-	},
-]);
+const dataStore = useDataStore();
+const languages = computed<IText[]>(() => dataStore.data['texts']['languages']);
 </script>

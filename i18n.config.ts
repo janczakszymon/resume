@@ -16,7 +16,8 @@ export default defineI18nConfig(() => ({
 			close: 'Kliknij by zamknąć',
 			images: 'Zdjęcia',
 			opensource: 'Opensource',
-			server: 'serwer'
+			server: 'serwer',
+			clickToShow: 'Kliknij aby wyświetlić'
 		},
 		en: {
 			aboutMe: 'About me',
@@ -34,7 +35,8 @@ export default defineI18nConfig(() => ({
 			close: 'Click to close',
 			images: 'Images',
 			opensource: 'Opensource',
-			server: 'server'
+			server: 'server',
+			clickToShow: 'Click to show content'
 		}
 	}
 }));

@@ -4,48 +4,25 @@
 		:title="$t('techStack')"
 		icon="i-heroicons-code-bracket"
 	>
-		<div class="flex flex-wrap gap-5">
-			<div
-				v-for="(tech, key) in techs"
-				:key="key"
-				class="flex items-center gap-1"
-			>
-				<NuxtImg
-					v-if="tech.icon"
-					:src="tech.icon"
-					:alt="`${tech.name}-icon`"
-					class="tech-icon"
-				/>
-				{{ tech.name }}
-			</div>
+		<div class="flex flex-wrap gap-5 md:w-3/4">
+			<template v-if="dataStore.data">
+				<div
+					v-for="(tech, key) in techStack"
+					:key="key"
+					class="flex items-center gap-1 bg-gray-200 p-1 rounded-lg"
+				>
+					{{ tech.name }}
+				</div>
+			</template>
+			<SkeletonComponent v-else />
 		</div>
 	</BoxComponent>
 </template>
 
 <script setup lang="ts">
 import type { ITech } from '~/interface/home/ITech';
+import { useDataStore } from '~/store/dataStore';
 
-const techs = ref<ITech[]>([
-	{
-		name: 'Vue',
-		icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/512px-Vue.js_Logo_2.svg.png?20170919082558',
-	},
-	{
-		name: 'Symfony',
-		icon: 'https://w7.pngwing.com/pngs/792/884/png-transparent-symfony-doctrine-php-software-developer-application-programming-interface-python-stickers-text-logo-programming-language-thumbnail.png',
-	},
-	{
-		name: 'Docker',
-		icon: '',
-	},
-]);
+const dataStore = useDataStore();
+const techStack = computed<ITech[]>(() => dataStore.data['technologies']);
 </script>
-
-<style scoped lang="scss">
-#techStack {
-  .tech-icon {
-    filter: grayscale(100%);
-    width: 20px;
-  }
-}
-</style>

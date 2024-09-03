@@ -4,28 +4,24 @@
 		:title="$t('certificates')"
 		icon="i-heroicons-clipboard-document-check"
 	>
-		<div
-			v-for="(cert, key) in certificates"
-			:key="key"
-		>
-			{{ cert.name }}
-			<CircleComponent />
-			{{ cert.description }}
-		</div>
+		<template v-if="dataStore.data">
+			<div
+				v-for="(cert, key) in certificates"
+				:key="key"
+			>
+				{{ cert.textPrimary[$i18n.locale] }}
+				<CircleComponent />
+				{{ cert.textSecondary[$i18n.locale] }}
+			</div>
+		</template>
+		<SkeletonComponent v-else />
 	</BoxComponent>
 </template>
 
 <script setup lang="ts">
-import type { ICertificate } from '~/interface/home/ICertificate';
+import { useDataStore } from '~/store/dataStore';
+import type { IText } from '~/interface/home/IText';
 
-const certificates = ref<ICertificate[]>([
-	{
-		name: 'INF.03',
-		description: 'Tworzenie witryn internetowych i Bazy danych',
-	},
-	{
-		name: 'INF.02',
-		description: 'Technologie informatyczne, Administrowanie siecią i Projektowanie sieci',
-	},
-]);
+const dataStore = useDataStore();
+const certificates = computed<IText[]>(() => dataStore.data['texts']['certificates']);
 </script>

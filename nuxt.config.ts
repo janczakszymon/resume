@@ -8,8 +8,14 @@ export default defineNuxtConfig({
 		'@nuxt/image',
 		'@nuxt/eslint',
 		'@nuxtjs/sitemap',
-		'@nuxtjs/i18n'
+		'@nuxtjs/i18n',
+		'@pinia/nuxt',
 	],
+	runtimeConfig: {
+		public: {
+			API_URL: process.env.API_URL || '',
+		},
+	},
 	googleFonts: {
 		download: true,
 		families: {
