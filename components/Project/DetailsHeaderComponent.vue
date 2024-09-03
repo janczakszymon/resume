@@ -23,7 +23,11 @@ const props = defineProps({
 	fullName: {
 		type: String,
 		required: true
-	}
+	},
+	name: {
+		type: String,
+		required: true
+	},
 });
 
 const breadcrumbLinks = ref([
@@ -34,7 +38,7 @@ const breadcrumbLinks = ref([
 	},
 	{
 		icon: 'i-heroicons-code-bracket',
-		label: route.params.projectName,
+		label: `#${route.params.id} ${props.name}`,
 	},
 ]);
 </script>
