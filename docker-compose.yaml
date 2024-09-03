@@ -9,8 +9,9 @@ services:
       - "3000:3000"
     expose:
       - "3000"
+    networks:
+      - local_network
 
 networks:
-  default:
-    external:
-      name: local_network
+  local_network:
+    external: true
