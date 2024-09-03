@@ -4,12 +4,12 @@
 		:title="$t('techStack')"
 		icon="i-heroicons-code-bracket"
 	>
-		<div class="flex flex-wrap gap-5 md:w-3/4">
+		<div class="flex flex-wrap gap-2 md:w-3/4">
 			<template v-if="dataStore.data">
 				<div
 					v-for="(tech, key) in techStack"
 					:key="key"
-					class="flex items-center gap-1 bg-gray-200 p-1 rounded-lg"
+					class="flex items-center gap-1 bg-gray-200 dark:bg-white/10 p-1 rounded-lg"
 				>
 					{{ tech.name }}
 				</div>
