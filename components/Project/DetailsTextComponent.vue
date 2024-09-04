@@ -1,5 +1,5 @@
 <template>
-	<p
+	<div
 		class="details-text-component my-5"
 		v-html="props.text"
 	/>
