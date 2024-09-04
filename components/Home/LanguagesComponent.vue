@@ -9,9 +9,11 @@
 				v-for="(lang, key) in languages"
 				:key="key"
 			>
-				{{ lang.textPrimary[$i18n.locale] }}
-				<CircleComponent />
-				{{ lang.textSecondary[$i18n.locale] }}
+				<div v-html="lang.textPrimary[$i18n.locale]" />
+				<div
+					class="text-gray-500"
+					v-html="lang.textSecondary[$i18n.locale]"
+				/>
 			</div>
 		</template>
 		<SkeletonComponent v-else />

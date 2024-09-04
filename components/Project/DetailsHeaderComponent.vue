@@ -6,9 +6,16 @@
 				ol: 'flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-2',
 				li: 'text-xs sm:text-sm'
 			}"
-		/>
+		>
+			<template #default="{ link }">
+				<div
+					class="flex gap-1.5"
+					v-html="link.label"
+				/>
+			</template>
+		</UBreadcrumb>
 		<h1>
-			{{ props.fullName }}
+			<div v-html="props.fullName" />
 			<UDivider />
 		</h1>
 	</div>

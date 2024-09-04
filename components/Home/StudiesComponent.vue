@@ -10,9 +10,11 @@
 				v-for="(study, key) in studies"
 				:key="key"
 			>
-				{{ study.textPrimary[$i18n.locale] }}
-				<CircleComponent />
-				{{ study.textSecondary[$i18n.locale] }}
+				<div v-html="study.textPrimary[$i18n.locale]" />
+				<div
+					class="text-gray-500"
+					v-html="study.textSecondary[$i18n.locale]"
+				/>
 			</div>
 		</template>
 		<SkeletonComponent v-else />

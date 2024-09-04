@@ -9,9 +9,15 @@
 				v-for="(project, key) in projects"
 				:key="key"
 				:to="`/projects/${project.id}`"
+				class="flex items-center"
 			>
-				<span class="underline">{{ project.name[$i18n.locale] }}</span>
-				<span class="type uppercase">{{ $t(project.type) }}</span>
+				<div
+					class="underline"
+					v-html="project.name[$i18n.locale]"
+				/>
+				<div class="type uppercase">
+					{{ $t(project.type) }}
+				</div>
 				<UIcon
 					name="i-heroicons-arrow-right"
 					class="icon"

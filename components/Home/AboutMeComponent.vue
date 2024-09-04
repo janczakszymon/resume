@@ -3,9 +3,9 @@
 		id="aboutMe"
 		:title="$t('aboutMe')"
 	>
-		<p
+		<div
 			v-if="dataStore.data"
-			v-text="aboutMe.textPrimary[$i18n.locale]"
+			v-html="aboutMe.textPrimary[$i18n.locale]"
 		/>
 		<SkeletonComponent v-else />
 	</BoxComponent>

@@ -10,7 +10,10 @@
 				:key="key"
 				class="experience-details"
 			>
-				<span class="position">{{ exp.position[$i18n.locale] }}</span>
+				<div
+					class="position"
+					v-html="exp.position[$i18n.locale]"
+				/>
 				<div>
 					{{ exp.company }}
 				</div>
@@ -38,7 +41,7 @@ const experiences = computed<IExperience[]>(() => dataStore.data['experiences'])
 <style scoped lang="scss">
 #experience {
   .experience-details {
-    div {
+    div:not(.position) {
       font-size: .8rem;
       color: $gray;
 

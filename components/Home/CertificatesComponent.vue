@@ -9,9 +9,11 @@
 				v-for="(cert, key) in certificates"
 				:key="key"
 			>
-				{{ cert.textPrimary[$i18n.locale] }}
-				<CircleComponent />
-				{{ cert.textSecondary[$i18n.locale] }}
+				<div v-html="cert.textPrimary[$i18n.locale]" />
+				<div
+					class="text-gray-500"
+					v-html="cert.textSecondary[$i18n.locale]"
+				/>
 			</div>
 		</template>
 		<SkeletonComponent v-else />
